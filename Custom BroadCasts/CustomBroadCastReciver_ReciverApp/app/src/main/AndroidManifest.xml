@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <permission android:name="com.example.custombroadcastreciverreciverapp.CUSTOM_PERMISSION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -25,7 +27,8 @@
         </activity>
         <receiver
             android:name=".ExampleBroadCastReceiver"
-            android:exported="true" />
+            android:exported="true"
+            android:permission="com.example.custombroadcastreciverreciverapp.CUSTOM_PERMISSION" />
     </application>
 
 </manifest>
