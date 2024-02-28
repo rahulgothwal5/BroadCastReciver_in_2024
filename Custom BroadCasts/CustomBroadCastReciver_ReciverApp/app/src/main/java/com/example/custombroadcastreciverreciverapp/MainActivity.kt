@@ -26,6 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.custombroadcastreciverreciverapp.ui.StringList
 import com.example.custombroadcastreciverreciverapp.ui.theme.custombroadcastreciverreciverappTheme
 
 class MainActivity : ComponentActivity() {
@@ -75,25 +76,7 @@ class MainActivity : ComponentActivity() {
                                 )
                             }
                         } else {
-                            LazyColumn {
-                                items(list.size) { index ->
-                                    val fruit = list[index]
-                                    val emoji = when (fruit) {
-                                        "Apple" -> "\uD83C\uDF4E"
-                                        "Orange" -> "\uD83C\uDF4A"
-                                        "Banana" -> "\uD83C\uDF4C"
-                                        "Grapes" -> "\uD83C\uDF47"
-                                        "Strawberry" -> "\uD83C\uDF53"
-                                        "Pineapple" -> "\uD83C\uDF4D"
-                                        "Watermelon" -> "\uD83C\uDF49"
-                                        "Mango" -> "\uD83C\uDF50"
-                                        "Kiwi" -> "\uD83E\uDD5D"
-                                        "Peach" -> "\uD83C\uDF51"
-                                        else -> "\uD83C\uDF4E"
-                                    }
-                                    Text(text = "$emoji $fruit")
-                                }
-                            }
+                            StringList(fruitList)
                         }
                     }
                 }
